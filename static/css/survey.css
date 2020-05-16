@@ -1,0 +1,116 @@
+.active-animations:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 2000; }
+
+.survey-block {
+  width: 100%;
+  height: 400px;
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden; }
+  .survey-block .count_resp {
+    position: absolute;
+    left: 5px;
+    top: calc(50% - 6px); }
+  .survey-block .block-q {
+    z-index: 10; }
+  .survey-block .block-q, .survey-block .block-q2 {
+    width: 100%;
+    height: calc(100% - 45px);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s; }
+    .survey-block .block-q .q-name, .survey-block .block-q2 .q-name {
+      width: 100%;
+      height: 33px;
+      text-align: center;
+      line-height: 36px;
+      border-bottom: 3px #000a00 solid; }
+  .survey-block .r_of_q {
+    display: block;
+    width: calc(100% - 45px);
+    min-height: 16px;
+    background: #e6e6e6;
+    margin-top: 2px;
+    position: relative;
+    padding-left: 35px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 10px; }
+    .survey-block .r_of_q input {
+      position: absolute;
+      left: 7px;
+      width: 14px;
+      height: 14px;
+      top: calc(50% - 14px); }
+  .survey-block .summit {
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+    width: 80%;
+    height: 30px;
+    cursor: pointer;
+    text-align: center;
+    z-index: 1000;
+    line-height: 30px;
+    background: #fafaff;
+    border: 2px black solid; }
+  .survey-block .q_true {
+    width: calc(100% - 51px);
+    border-left: darkgreen 6px solid; }
+  .survey-block .q_false {
+    width: calc(100% - 51px);
+    border-left: #1e1e1e 6px solid; }
+  .survey-block .progress {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.1); }
+  .survey-block .q_true .progress {
+    background: rgba(0, 70, 0, 0.1); }
+  .survey-block .prev_page {
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+    width: 36%;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1000; }
+  .survey-block .next_page {
+    position: absolute;
+    bottom: 20px;
+    right: 10%;
+    width: 36%;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1000; }
+  .survey-block .next_page, .survey-block .prev_page {
+    text-align: center;
+    line-height: 30px;
+    background: #fafaff;
+    border: 2px black solid; }
+  .survey-block .block-q2 {
+    left: -100%; }
+  .survey-block .right {
+    left: 100%; }
+  .survey-block .to-left {
+    left: -100%;
+    -webkit-transition-duration: 0s;
+            transition-duration: 0s; }
+  .survey-block .to-right {
+    left: 100%;
+    -webkit-transition-duration: 0s;
+            transition-duration: 0s; }
+  .survey-block .to-center {
+    left: 0;
+    -webkit-transition-duration: 0s;
+            transition-duration: 0s; }

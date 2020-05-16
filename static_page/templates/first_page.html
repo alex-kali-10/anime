@@ -1,0 +1,124 @@
+<div class="top-slider box-shadow">
+    <div class="name-block">
+        ПОПУЛЯРНОЕ
+    </div>
+    <div class="owl-carousel owl-theme1">
+        {% for item in top_slider_list %}
+            <div class="slide"
+                 onmousedown="value_click= event.clientX+':'+event.clientY"
+                 onmouseup=" if(event.clientX+':'+event.clientY === value_click){react_router.toPage('film/'+{{ item.id }})}"
+                 style="background-image: url({{ item.avatar.url }})">
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="left-block-inf box-shadow">
+    <div class="name-block">
+        ОБНОВЛЕНИЯ АНИМЕ
+    </div>
+    {% for item in apdate_list %}
+        <div class="item-list" onclick="{react_router.toPage('film/'+{{ item.block_video.film.id }}) }">
+            <div class="block-data"></div>
+            <div class="block-avatar" style="background-image: url({{ item.block_video.film.avatar.url }})"></div>
+            <div class="block-name">&#8194;Серия:{{ item.name }}.&#8194;Озвучка:{{ item.block_video.voice }}.</div>
+        </div>
+    {% endfor %}
+
+</div>
+
+<div class="right-block-inf box-shadow">
+    <div class="name-block">
+        НОВОСТИ
+    </div>
+
+    {% for item in news_list %}
+        <div class="item-list">
+            <div class="block-data"></div>
+            <div class="block-name-long">&#8194;{{ item.name }}</div>
+        </div>
+    {% endfor %}
+
+    <div class="name-block">
+        АНОНСЫ
+    </div>
+
+    {% for item in anons_list %}
+        <div class="item-list" onclick="{react_router.toPage('film/'+{{ item.id }}) }">
+            <div class="block-data"></div>
+            <div class="block-name-long">&#8194;{{ item.name }}</div>
+        </div>
+    {% endfor %}
+
+</div>
+
+
+
+
+<div class="bottom-block-slider box-shadow">
+
+    <div class="name-block">
+        РЕКОМЕНДУЕМЫЕ ВИДЕО
+    </div>
+
+    <!-- <a href="https://www.youtube.com/watch?v=SPaD77TBbAc"><img src="//img.youtube.com/vi/SPaD77TBbAc/0.jpg"></a> -->
+    <div class="owl-carousel owl-theme2">
+        {% for item in recommend_list %}
+        <a href="https://www.youtube.com/watch?v={{ item.href }}" target="_blank">
+            <div class="slide"
+             style="background-image: url(//img.youtube.com/vi/{{ item.href }}/0.jpg)">
+            </div>
+        </a>
+    {% endfor %}
+</div>
+</div>
+
+<div class="bottom-list box-shadow">
+    <div class="name-block">
+        НОВОЕ
+    </div>
+
+    {% for item in new_film_list %}
+    <div class="block-film" onclick="react_router.toPage('film/'+{{ item.id }})">
+        <div class="block-avatar" style="background-image: url({{ item.avatar.url }})"></div>
+        <div class="block-name">{{ item.name }}</div>
+        <div class="views-block">{{ item.goodViews }}</div>
+        <div class="best-block">{{ item.count_best }}</div>
+        <div class="most-watch-block">{{ item.count_watch }}</div>
+        <div class="reiting-line-area">
+            <div class="count-likes">{{ item.count_likes }}</div>
+            <div class="line"><div class="dislike-line" style="width:{{ item.width_dislike_line }}%"></div></div>
+            <div class="count-dislikes">{{ item.count_dislikes }}</div>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+
+
+
+
+<script type = "text/javascript" id="myScript">
+let owl = $('.owl-theme1');
+owl.owlCarousel({
+    margin:0,
+    loop:true,
+    autoWidth:true,
+    items:4,
+    nav: true,
+})
+
+let owl2 = $('.owl-theme2');
+owl2.owlCarousel({
+    margin:0,
+    loop:true,
+    autoWidth:true,
+    items:4,
+    nav: true,
+})
+
+//owl.on('changed.owl.carousel', function(event) {
+//    console.log('переистываю');
+//})
+
+</script>

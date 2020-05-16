@@ -1,0 +1,148 @@
+.name-block
+  width: 100%
+  height: 42px
+  background: rgb(54,50,50)
+  text-align: center
+  color: rgb(230,230,230)
+  font-size: 18px
+  line-height: 45px
+  position: relative
+  border-bottom: 3px darkred solid
+  .left1
+    position: absolute
+    left: 10px
+    bottom: 0px
+    color: white
+    width: 110px
+    height: 30px
+    line-height: 30px
+    border: 3px solid darkgreen
+    border-bottom: none
+    font-size: 15px
+    cursor: pointer
+
+  .left2
+    position: absolute
+    left: 130px
+    bottom: 0px
+    color: white
+    width: 110px
+    height: 30px
+    line-height: 30px
+    border: 3px solid darkgreen
+    border-bottom: none
+    font-size: 15px
+    cursor: pointer
+
+.top-slider, .bottom-block-slider
+  width: 100%
+  height: 300px
+  background: lightgrey
+  float: left
+  .owl-prev
+    width: 20px
+    height: 100%
+    position: absolute
+    left: 0
+    top: 0
+    background: rgba(230,230,230,0.5) !important
+    font-size: 60px !important
+    &:hover
+      background: rgba(230,230,230,0.8) !important
+  .owl-next
+    width: 20px
+    height: 100%
+    position: absolute
+    right: 0
+    top: 0
+    background: rgba(230,230,230,0.5) !important
+    font-size: 60px !important
+    &:hover
+      background: rgba(230,230,230,0.8) !important
+  .owl-theme1
+    width: 100%
+    height: calc(100% - 45px)
+    background: darkblue
+    .slide
+      height: 255px
+      width: 190px
+      background: darkgreen
+      background-size: cover
+      cursor: pointer
+  .owl-theme2
+    width: 100%
+    height: calc(100% - 45px)
+    background: darkblue
+    .slide
+      height: 255px
+      width: 300px
+      background: darkgreen
+      background-size: cover
+      background-position-x: -40px
+      cursor: pointer
+      background-repeat: no-repeat
+
+.left-block-inf, .right-block-inf
+  width: calc(50% - 5px)
+  height: 630px
+  float: left
+  margin-top: 10px
+  .item-list
+    text-align: left
+    width: calc(100% - 4px)
+    height: 43px
+    margin-top: 2px
+    cursor: pointer
+    border-left: 4px solid black
+    &:nth-child(2n)
+      .block-name
+        background: rgb(200,200,200) !important
+      .block-name-long
+        background: rgb(200,200,200) !important
+    &:hover
+      border-left: 4px solid green
+    .block-data
+      width: 70px
+      height: 100%
+      float: left
+      background: rgb(60,60,60)
+      line-height: 45px
+    .block-avatar
+      width: 30px
+      height: 100%
+      float: left
+      background: rgb(80,80,80)
+      background-size: cover
+    .block-name
+      width: calc(100% - 100px)
+      height: 100%
+      float: left
+      //background: rgb(220,220,220)
+      background: rgb(180,180,180)
+      line-height: 45px
+    .block-name-long
+      width: calc(100% - 70px)
+      height: 100%
+      float: left
+      background: rgb(180,180,180)
+      line-height: 45px
+      font-size: 14px
+.right-block-inf
+  width: calc(50% - 5px)
+  height: 630px
+  float: left
+  margin-top: 10px
+  margin-left: 10px
+
+.bottom-block-slider
+  width: 100%
+  height: 300px
+  background: lightgrey
+  float: left
+  margin-top: 10px
+
+.bottom-list
+  width: 100%
+  float: left
+  margin-top: 10px
+  text-align: center

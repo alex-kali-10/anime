@@ -1,0 +1,571 @@
+.catalog_react
+  width: 100%
+  .react_conteiner
+    display: inline-block
+    width: 100%
+    height: 335px
+  .left-block
+    width: calc(30% - 1px)
+    display: block
+    float: left
+    z-index: 200
+    position: relative
+    padding-bottom: 45px
+    height: calc(100% - 45px)
+    border-right: 1px grey solid
+    .active_genre
+      display: block
+      background: rgb(250,250,250)
+      padding: 5px
+      margin: 4px
+      height: 22px
+      line-height: 22px
+      text-align: center
+      float: left
+      text-align: center
+      padding-left: 5px
+      padding-right: 20px
+      margin-left: 4px
+      cursor: pointer
+      position: relative
+      border: 1px rgb(30,50,30) solid
+      font-size: 14px
+      .close-area
+        display: block
+        position: absolute
+        width: 11px
+        height: 11px
+        right: 5px
+        top: 10px
+        transform: rotate(45deg)
+        &:before
+          content: ''
+          display: block
+          width: 100%
+          height: 1px
+          position: absolute
+          left: 0
+          top: 5px
+          background: black
+        &:after
+          content: ''
+          display: block
+          width: 1px
+          height: 100%
+          position: absolute
+          left: 5px
+          top: 0
+          background: black
+        &:hover
+          &:before, &:after
+            background: darkred
+    .add-genre
+      clear: both
+      width: 70%
+      height: 35px
+      background: rgb(250,250,255)
+      text-align: center
+      margin-top: 8px
+      line-height: 35px
+      cursor: pointer
+      z-index: 200
+      border: 1px black solid
+      position: absolute
+      bottom: 5px
+      left: calc(15% - 1px)
+      .list-genre
+        position: absolute
+        display: block
+        left: -1px
+        top: 100%
+        width: 100%
+        height: 400px
+        overflow: auto
+        z-index: 200
+        border-bottom: 1px black solid
+        border-left: 1px black solid
+        &::-webkit-scrollbar
+          width: 5px
+          height: 3px
+        &::-webkit-scrollbar-button
+          display: none
+        &::-webkit-scrollbar-track
+          background-color: #999
+        &::-webkit-scrollbar-track-piece
+          //background-color: rgb(30,30,30)
+          background-color: green
+        &::-webkit-scrollbar-thumb
+          background-color: #f1ede3
+          border-radius: 3px
+        .genre
+          width: 100%
+          height: 30px
+          background: white
+          line-height: 30px
+          display: block
+          border-top: 1px grey solid
+          transition: background-color 0.3s ease, color 0.3s ease
+          &:hover
+            background: rgb(40,80,40)
+            color: white
+        .active
+          color: darkgreen
+  .right-block
+    width: 70%
+    display: block
+    float: left
+    .name-poisk
+      width: calc(100% - 20px)
+      height: 30px
+      margin-top: 10px
+      margin-left: 10px
+      position: relative
+      float: left
+      text-align: center
+      line-height: 25px
+      .border-bottom
+        border-bottom: 1px rgb(30,30,30) solid
+        display: inline-block
+        padding-left: 10px
+        padding-right: 10px
+    .left-poisk
+      width: 50%
+      display: block
+      float: left
+    .right-poisk
+      width: 50%
+      display: block
+      float: left
+    .poisk-button
+      text-align: center
+      background: white
+      line-height: 25px
+      z-index: 100 !important
+      border: 1px black solid
+      width: calc(100% - 22px) !important
+    .change-list, .poisk-button
+      z-index: 9999
+      width: calc(100% - 20px)
+      height: 30px
+      margin-top: 10px
+      margin-left: 10px
+      position: relative
+      float: left
+      cursor: pointer
+      border-top: 1px black solid
+      border-bottom: 1px black solid
+      .item
+        width: calc(100% - 2px)
+        height: 100%
+        background: white
+        display: block
+        position: absolute
+        left: 0
+        top: 0
+        text-align: center
+        transition-duration: 0.2s
+        line-height: 30px
+        border-left: 1px solid black
+        border-right: 1px solid black
+        &:hover
+          background: rgb(230,255,230)
+        &:first-child
+          border-top: 1px solid black
+        &:last-child
+          border-bottom: 1px solid black
+        &:nth-child(1)
+          top: calc(0% - 1px)
+        &:nth-child(2)
+          top: 100%
+        &:nth-child(3)
+          top: 200%
+        &:nth-child(4)
+          top: 300%
+        &:nth-child(5)
+          top: 400%
+        &:nth-child(6)
+          top: 500%
+    .serial
+      .item
+        &:nth-child(1)
+          top: -200%
+        &:nth-child(2)
+          top: -100%
+        &:nth-child(3)
+          top: 000%
+    .film
+      .item
+        &:nth-child(1)
+          top: -100%
+        &:nth-child(2)
+          top: 000%
+        &:nth-child(3)
+          top: 100%
+
+
+    .vishel
+      .item
+        &:nth-child(1)
+          top: -100%
+        &:nth-child(2)
+          top: 0%
+        &:nth-child(3)
+          top: 100%
+        &:nth-child(4)
+          top: 200%
+    .ongoing
+      .item
+        &:nth-child(1)
+          top: -200%
+        &:nth-child(2)
+          top: -100%
+        &:nth-child(3)
+          top: 000%
+        &:nth-child(4)
+          top: 100%
+    .anons
+      .item
+        &:nth-child(1)
+          top: -300%
+        &:nth-child(2)
+          top: -200%
+        &:nth-child(3)
+          top: -100%
+        &:nth-child(4)
+          top: 000%
+
+
+    .zima
+      .item
+        &:nth-child(1)
+          top: -100%
+        &:nth-child(2)
+          top: 0%
+        &:nth-child(3)
+          top: 100%
+        &:nth-child(4)
+          top: 200%
+        &:nth-child(5)
+          top: 300%
+    .vesna
+      .item
+        &:nth-child(1)
+          top: -200%
+        &:nth-child(2)
+          top: -100%
+        &:nth-child(3)
+          top: 000%
+        &:nth-child(4)
+          top: 100%
+        &:nth-child(5)
+          top: 200%
+    .leto
+      .item
+        &:nth-child(1)
+          top: -300%
+        &:nth-child(2)
+          top: -200%
+        &:nth-child(3)
+          top: -100%
+        &:nth-child(4)
+          top: 000%
+        &:nth-child(5)
+          top: 100%
+    .osen
+      .item
+        &:nth-child(1)
+          top: -400%
+        &:nth-child(2)
+          top: -300%
+        &:nth-child(3)
+          top: -200%
+        &:nth-child(4)
+          top: -100%
+        &:nth-child(5)
+          top: 000%
+
+
+
+
+
+    .G
+      .item
+        &:nth-child(1)
+          top: -100%
+        &:nth-child(2)
+          top: 0%
+        &:nth-child(3)
+          top: 100%
+        &:nth-child(4)
+          top: 200%
+        &:nth-child(5)
+          top: 300%
+        &:nth-child(6)
+          top: 400%
+    .PG
+      .item
+        &:nth-child(1)
+          top: -200%
+        &:nth-child(2)
+          top: -100%
+        &:nth-child(3)
+          top: 000%
+        &:nth-child(4)
+          top: 100%
+        &:nth-child(5)
+          top: 200%
+        &:nth-child(6)
+          top: 300%
+    .PG-13
+      .item
+        &:nth-child(1)
+          top: -300%
+        &:nth-child(2)
+          top: -200%
+        &:nth-child(3)
+          top: -100%
+        &:nth-child(4)
+          top: 000%
+        &:nth-child(5)
+          top: 100%
+        &:nth-child(6)
+          top: 200%
+    .R-17
+      .item
+        &:nth-child(1)
+          top: -400%
+        &:nth-child(2)
+          top: -300%
+        &:nth-child(3)
+          top: -200%
+        &:nth-child(4)
+          top: -100%
+        &:nth-child(5)
+          top: 000%
+        &:nth-child(6)
+          top: 100%
+    .RR
+      .item
+        &:nth-child(1)
+          top: -500%
+        &:nth-child(2)
+          top: -400%
+        &:nth-child(3)
+          top: -300%
+        &:nth-child(4)
+          top: -200%
+        &:nth-child(5)
+          top: -100%
+        &:nth-child(6)
+          top: 000%
+
+
+
+
+
+    .rate
+      .item
+        &:nth-child(1)
+          top: -100%
+        &:nth-child(2)
+          top: 0%
+        &:nth-child(3)
+          top: 100%
+        &:nth-child(4)
+          top: 200%
+        &:nth-child(5)
+          top: 300%
+        &:nth-child(6)
+          top: 400%
+    .views
+      .item
+        &:nth-child(1)
+          top: -200%
+        &:nth-child(2)
+          top: -100%
+        &:nth-child(3)
+          top: 000%
+        &:nth-child(4)
+          top: 100%
+        &:nth-child(5)
+          top: 200%
+        &:nth-child(6)
+          top: 300%
+    .alf
+      .item
+        &:nth-child(1)
+          top: -300%
+        &:nth-child(2)
+          top: -200%
+        &:nth-child(3)
+          top: -100%
+        &:nth-child(4)
+          top: 000%
+        &:nth-child(5)
+          top: 100%
+        &:nth-child(6)
+          top: 200%
+    .new-old
+      .item
+        &:nth-child(1)
+          top: -400%
+        &:nth-child(2)
+          top: -300%
+        &:nth-child(3)
+          top: -200%
+        &:nth-child(4)
+          top: -100%
+        &:nth-child(5)
+          top: 000%
+        &:nth-child(6)
+          top: 100%
+    .old-new
+      .item
+        &:nth-child(1)
+          top: -500%
+        &:nth-child(2)
+          top: -400%
+        &:nth-child(3)
+          top: -300%
+        &:nth-child(4)
+          top: -200%
+        &:nth-child(5)
+          top: -100%
+        &:nth-child(6)
+          top: 000%
+
+.paginator
+  margin-top: 10px
+  width: 100%
+  height: 50px
+  float: left
+  .page-href
+    display: inline-block
+    margin-top: 5px
+    margin-left: 4px
+    width: 36px
+    height: 36px
+    line-height: 40px
+    cursor: pointer
+    border: 1px black solid
+    transition-duration: 0.5s
+    &:hover
+      background: rgba(0,0,0,0.3)
+  .to-center
+    display: block
+    min-width: 10px
+    height: 100%
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+  .not-active
+    background: rgba(0,0,0,0.3)
+    cursor: auto
+
+
+
+input[type='range']
+  width: calc(100% - 130px)
+  height: 30px
+  overflow: hidden
+  cursor: pointer
+  outline: none
+
+input[type='range'],
+input[type='range']::-webkit-slider-runnable-track,
+input[type='range']::-webkit-slider-thumb
+  -webkit-appearance: none
+  background: none
+
+input[type='range']::-webkit-slider-runnable-track
+  width: 200px
+  height: 1px
+  background: rgb(130,130,130)
+
+
+input[type='range']:nth-child(2)::-webkit-slider-runnable-track
+  background: none
+
+
+input[type='range']::-webkit-slider-thumb
+  position: relative
+  height: 15px
+  width: 15px
+  margin-top: -7px
+  background: rgb(230,230,230)
+  border: 1px solid black
+  border-radius: 25px
+  z-index: 1
+
+
+
+input[type='range']:nth-child(1)::-webkit-slider-thumb
+  z-index: 2
+
+
+.rangeslider
+  height: 30px
+  width: calc(100% - 130px)
+  display: block
+  margin-left: auto
+  margin-right: auto
+  text-align: left
+
+.rangeslider input
+  position: absolute
+
+
+.range input
+  position: absolute
+.range > input
+  width: 40px
+  top: 6px
+  background: none
+  border: 1px solid black
+  padding: 2px
+  text-align: center
+  color: black
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button
+    -webkit-appearance: none
+
+
+.range
+  float: left
+  display: block
+  //background: rgb(30,30,30)
+  height: 35px
+  width: 100%
+  position: relative
+
+.range > .min
+  left: 7px
+
+.range > .max
+  right: 7px
+
+
+.pereferia-block
+  .catalog_react
+    margin-top: 10px
+    height: auto
+    .left-block
+      min-height: 5px
+      border-right: none !important
+      border-bottom: 1px grey solid
+    .right-block
+      .left-poisk, .right-poisk
+        width: 100%
+  .react_conteiner
+    height: auto
+    .left-block
+      width: 100%
+    .right-block
+      width: 100%
+  .per-hidden
+    display: none
+
+.list-film
+  display: inline-block
+  text-align: center
+

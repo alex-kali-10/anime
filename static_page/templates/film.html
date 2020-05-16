@@ -1,0 +1,60 @@
+
+
+
+<div class="film-area box-shadow" style="display: inline-block">
+    <div class="left-block">
+        <div class="block-name">{{ film.name }}</div>
+        <div class="br"></div>
+        <div class="block-state">Статус: {{ film.state }}</div>
+        <div class="block-views">Просмотры: {{ film.views }}</div>
+        <div class="block-year">Год выхода: {{ film.year }}</div>
+        <div class="block-season">Сезон: {{ film.season }}</div>
+        <div class="block-genre">Жанр: {% for genre in film.genres %}{% if forloop.last %} {{ genre.genre}}.{% else %} {{ genre.genre}},{% endif %}{% endfor %}</div>
+        <div class="block-age_rating">Возрастной рейтинг: {{ film.age_rating }}</div>
+        <div class="block-source">Первоисточник: {{ film.source }}</div>
+        <div class="block-studio"><div class="green-href" onclick="react_router.toPage('studio/{{ film.studio }}/popular')">Студия: {{ film.studio }}</div></div>
+        <div class="block-producer"><div class="green-href" onclick="react_router.toPage('producer/{{ film.producer }}/popular')">Продессер: {{ film.producer }}</div></div>
+    </div>
+
+    <div class="right-block">
+        <div class="block-avatar" style="background-image: url({{ film.avatar.url }})"></div>
+        <div class="my-otziv" id="my-otziv"></div>
+    </div>
+
+    <div class="bottom-block">
+        {{ film.description }}
+    </div>
+
+    <div class="name-block" style="float: left">
+        Видео
+    </div>
+
+    <div class="bottom-block2">
+        {% for item in film.block.all %}
+            <div class="block-video" id="block-video-{{item.id}}">
+                <div class="inf-block-video not-active" onclick="change_active(this)">
+                Озвучка: {{ item.voice }}. Плеер {{ item.player }}.
+                </div>
+                <div class="list-video">
+                    {% for video in item.video.all %}
+                        <div class="href-video" onclick="ChangeVideo('block-video-{{item.id}}','{{video.href_video}}')">{{ video.name }}</div>
+                    {% endfor %}
+                    <div class="area-for-player"></div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+
+</div>
+
+
+<div class="comments-area box-shadow" id="comments-area">
+
+</div>
+
+
+<script type = "text/babel" id="myScript">
+    ReactDOM.render(React.createElement(React_comments ,{id: {{ film.id }} }, null), document.getElementById('comments-area'));
+    ReactDOM.render(React.createElement(React_feedback_film ,{id: {{ film.id }},my_carma: '{{ my_carma_film }}',count_like: {{film.count_likes}},count_dislike: {{film.count_dislikes}},my_list: `{{ my_list_film }}` }, null), document.getElementById('my-otziv'));
+</script>

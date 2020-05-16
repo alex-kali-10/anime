@@ -1,0 +1,175 @@
+.comments-area
+  width: 100%
+  float: left
+  margin-top: 10px
+
+.block-comments
+  display: block
+  width: 100%
+  min-height: 200px
+  text-align: left
+  textarea
+    width: calc(100% - 26px)
+    height: 70px
+    margin-left: 10px
+    margin-top: 15px
+  .comment-options
+    width: 100%
+    height: 45px
+    margin-top: 10px
+    margin-bottom: 10px
+    input[type='submit']
+      float: right
+      height: 30px
+      border: 1px solid black
+      margin-right: 10px
+  .not-auth
+    text-align: center
+    padding-top: 20px
+    padding-bottom: 15px
+  .comment
+    display: block
+    width: calc(100% - 120px)
+    min-height: 80px
+    margin-top: 7px
+    color: rgb(60,60,60)
+    padding-left: 120px
+    padding-top: 35px
+    position: relative
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      left: 5%
+      bottom: 0px
+      width: 90%
+      height: 1px
+      background: rgba(30,30,30,0.4)
+    .avatar
+      position: absolute
+      left: 15px
+      top: 15px
+      background: grey
+      width: 80px
+      height: 80px
+      background-size: cover
+      background-position: center
+      border-radius: 50px / 50px
+    .username-block
+      position: absolute
+      left: 115px
+      top: 8px
+    .delete-block
+      position: absolute
+      right: 5px
+      top: 7px
+      background-image: url(../image/delete.svg)
+      background-size: cover
+      width: 20px
+      height: 20px
+      cursor: pointer
+    .edit-block
+      position: absolute
+      right: 30px
+      top: 7px
+      background-image: url(../image/edit.svg)
+      background-size: cover
+      width: 20px
+      height: 20px
+      cursor: pointer
+    .not-edit-block
+      position: absolute
+      right: 30px
+      top: 7px
+      background-image: url(../image/no-edit.svg)
+      background-size: cover
+      width: 20px
+      height: 20px
+      cursor: pointer
+
+//.block-comments
+//  .comment
+//    &:last-child
+//      background: red
+//      &:before
+//        background: rgba(30,30,30,0) !important
+
+.choise-comment-order
+  display: block
+  width: 100%
+  height: 42px
+  background: rgb(50,50,50)
+  border-bottom: 3px darkred solid
+  .item-choise
+    display: block
+    height: 100%
+    width: 120px
+    float: left
+    margin-left: 10px
+    text-align: center
+    line-height: 40px
+    cursor: pointer
+    color: white
+    transition-duration: 0.4s
+    &:hover
+      background: darkred
+.new
+  .new-item
+    background: darkred
+
+.popular
+  .popular-item
+    background: darkred
+
+.karma-area
+  position: absolute
+  right: 50px
+  top: 5px
+  height: 25px
+  width: 110px
+  .count
+    float: left
+    height: 25px
+    margin-left: 10px
+    text-align: center
+    line-height: 25px
+  .like
+    display: block
+    width: 20px
+    height: 20px
+    float: left
+    margin-left: 2px
+    background-image: url(../image/like.svg)
+    background-size: cover
+    cursor: pointer
+    position: relative
+  .dislike
+    display: block
+    width: 20px
+    height: 20px
+    float: left
+    margin-left: 10px
+    background-image: url(../image/dislike.svg)
+    background-size: cover
+    cursor: pointer
+    position: relative
+.karma_like
+  .like
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      width: 100%
+      height: 100%
+      background-image: url(../image/like-active.svg)
+      background-size: cover
+.karma_dislike
+  .dislike
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      width: 100%
+      height: 100%
+      background-image: url(../image/dislike-active.svg)
+      background-size: cover

@@ -1,0 +1,94 @@
+.top-menu {
+  width: 100%;
+  height: 160px;
+  position: relative;
+  background-image: url(../image/top_image.jpg);
+  background-size: cover;
+  background-position: top; }
+  .top-menu .top-menu2 {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    bottom: 0;
+    left: 0;
+    background: rgba(30, 30, 30, 0.8);
+    border-top: 3px solid darkred;
+    border-bottom: 3px solid darkred; }
+    .top-menu .top-menu2 .top-menu-inner {
+      width: 1300px;
+      height: 100%;
+      margin-left: calc(50% - 650px);
+      position: relative; }
+      .top-menu .top-menu2 .top-menu-inner .left-block {
+        position: absolute;
+        left: 0;
+        top: -5px;
+        width: 220px;
+        height: calc(100% + 10px);
+        background-image: url(../image/new-logo3.png);
+        background-size: cover;
+        background-position: center; }
+      .top-menu .top-menu2 .top-menu-inner .right-block {
+        position: absolute;
+        right: 0;
+        top: 0;
+        min-width: 200px;
+        height: 100%; }
+        .top-menu .top-menu2 .top-menu-inner .right-block .area-item {
+          position: relative;
+          width: 130px;
+          height: 60px;
+          background: #323232;
+          margin-right: 1px;
+          display: inline-block;
+          color: white;
+          cursor: pointer; }
+          .top-menu .top-menu2 .top-menu-inner .right-block .area-item .big-word {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            text-align: center;
+            font-size: 19px;
+            line-height: 35px; }
+          .top-menu .top-menu2 .top-menu-inner .right-block .area-item .item {
+            position: absolute !important; }
+        .top-menu .top-menu2 .top-menu-inner .right-block .item {
+          position: relative;
+          width: 130px;
+          height: 100%;
+          background: #323232;
+          margin-right: 1px;
+          display: inline-block;
+          color: white;
+          cursor: pointer;
+          -webkit-transition: background-color 0.3s ease;
+          transition: background-color 0.3s ease; }
+          .top-menu .top-menu2 .top-menu-inner .right-block .item:hover {
+            background: darkred; }
+          .top-menu .top-menu2 .top-menu-inner .right-block .item .big-word {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            text-align: center;
+            font-size: 19px;
+            line-height: 35px; }
+          .top-menu .top-menu2 .top-menu-inner .right-block .item .little-word {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            text-align: center;
+            font-size: 16px;
+            line-height: 15px; }
+
+.area-item-hidden {
+  overflow: hidden; }
+  .area-item-hidden .bottom-area-form {
+    display: none !important; }
+  .area-item-hidden .area-auth {
+    display: none !important; }

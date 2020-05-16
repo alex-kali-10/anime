@@ -1,0 +1,166 @@
+
+
+@media (max-width: 1330px)
+  .area-content
+    width: calc(100% - 330px)
+    margin-left: 10px
+  .top-menu-inner
+    width: calc(100% - 30px) !important
+    margin-left: 15px !important
+
+
+
+
+@media (max-width: 1200px)
+  .bottom-area-form, .area-auth
+    border-top: 2px solid grey !important
+    position: fixed !important
+    right: 0 !important
+    bottom: 0 !important
+  .active-mobile-menu
+    height: 450px
+  .top-menu
+    background-color: white
+    background-size: auto 160px
+    background-repeat: no-repeat
+    transition-duration: 1s
+    overflow: hidden
+    border-bottom: 1px solid grey
+  .top-menu2
+    top: 95px !important
+    //height: calc(100% - 100px) !important
+  .top-menu-inner
+    .left-block
+      left: calc(50% - 110px) !important
+      height: 56px !important
+      top: 2px !important
+      width: 165px !important
+    .right-block
+      right: 0 !important
+      width: 100% !important
+      top: 80px !important
+      z-index: 1000 !important
+      height: 70px
+      .item
+        width: calc(50% - 3px) !important
+        height: 60px !important
+      .area-item
+        width: calc(100% - 1px) !important
+        .item
+          width: 100% !important
+          height: 100% !important
+
+
+@media (max-width: 1010px)
+  .active-mobile-menu
+    height: 160px
+  .menu-icon
+    display: block
+    z-index: 9
+  .menu-button
+    display: block
+  .area-content
+    width: calc(100% - 30px) !important
+    margin-left: 10px !important
+  .pereferia-block
+    position: fixed
+    left: 100%
+    transition: left 0.5s ease
+    //opacity: 0
+    top: 0
+    width: 100%
+    height: 100%
+    z-index: 2000
+    background: #e2e2e2 !important
+    margin-left: 0 !important
+    margin-top: 0 !important
+    overflow: auto
+    &::-webkit-scrollbar
+      width: 5px
+      height: 3px
+    &::-webkit-scrollbar-button
+      display: none
+    &::-webkit-scrollbar-track
+      background-color: #999
+    &::-webkit-scrollbar-track-piece
+      background-color: white
+    &::-webkit-scrollbar-thumb
+      background-color: darkgreen
+      border-radius: 3px
+    & > div
+      width: 300px
+      height: auto
+      margin-left: auto
+      margin-right: auto
+      margin-top: 15px
+      margin-bottom: 10px
+  .top-menu2
+    position: fixed !important
+    transition: left 0.5s ease
+    //opacity: 0
+    left: -100% !important
+    top: 0 !important
+    z-index: 3000 !important
+    background: #e2e2e2 !important
+    width: 100% !important
+    height: 100% !important
+    &:before
+      content: ''
+      width: 100%
+      height: 105px
+      background: rgb(50,50,50)
+      position: absolute
+      left: 0
+      top: 0
+    .left-block
+      margin-top: 21px
+    .right-block
+      margin-top: 35px !important
+      .item
+        width: calc(100% - 10px) !important
+        margin-left: auto !important
+        margin-right: auto !important
+      .area-item
+        width: calc(100% - 10px) !important
+  .view-left-block
+    .top-menu2
+      left: 0%!important
+      //opacity: 1
+    .menu-button:before, .menu-button:after, .menu-button .bar
+      background: rgb(220,220,220)
+  .view-top-block
+    .pereferia-block
+      left: 0 !important
+      //opacity: 1
+
+@media (max-width: 950px)
+  .film-area .right-block
+    width: 200px
+    .block-avatar
+      height: 280px
+    .my-list, .most-watch
+      width: 150px !important
+      padding-right: 35px
+      margin-left: auto !important
+      margin-right: auto !important
+      float: none !important
+  .film-area .left-block
+    width: calc(100% - 220px)
+  .catalog_react
+    margin-top: 10px
+    height: auto
+    .left-block
+      min-height: 5px
+      border-right: none !important
+      border-bottom: 1px grey solid
+    .right-block
+      .left-poisk, .right-poisk
+        width: 100%
+  .react_conteiner
+    height: auto !important
+    .left-block
+      width: 100%
+    .right-block
+      width: 100%
+  .per-hidden
+    display: none

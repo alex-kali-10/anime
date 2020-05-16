@@ -1,0 +1,19 @@
+{% for item in films %}
+<div class="block-film" onclick="react_router.toPage('film/'+{{ item.id }})">
+    <div class="block-avatar" style="background-image: url({{ item.avatar.url }})"></div>
+    <div class="block-name">{{ item.name }}</div>
+    <div class="views-block">{{ item.goodViews }}</div>
+    <div class="best-block">{{ item.count_best }}</div>
+    <div class="most-watch-block">{{ item.count_watch }}</div>
+    <div class="reiting-line-area">
+        <div class="count-likes">{{ item.count_likes }}</div>
+        <div class="line"><div class="dislike-line" style="width:{{ item.width_dislike_line }}%"></div></div>
+        <div class="count-dislikes">{{ item.count_dislikes }}</div>
+    </div>
+</div>
+{% endfor %}
+
+
+<script type = "text/babel" id="change_max_page">
+    react_paginator.setState({lastPage:  {{lastPage}}  });
+</script>

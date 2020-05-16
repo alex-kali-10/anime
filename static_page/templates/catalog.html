@@ -1,0 +1,50 @@
+<div class="catalog_react box-shadow" id="catalog_react"></div>
+
+<div class="box-shadow" style="margin-top:10px">
+    <div class="name-block">
+        Каталог
+    </div>
+    <div class="list-film">
+
+      <!--  {% for item in films %}
+        <div class="block-film" onclick="react_router.toPage('film/'+{{ item.id }})">
+            <div class="block-avatar" style="background-image: url({{ item.avatar.url }})"></div>
+            <div class="block-name">{{ item.name }}</div>
+            <div class="views-block">{{ item.goodViews }}</div>
+            <div class="best-block">{{ item.count_best }}</div>
+            <div class="most-watch-block">{{ item.count_watch }}</div>
+            <div class="reiting-line-area">
+                <div class="count-likes">{{ item.count_likes }}</div>
+                <div class="line"><div class="dislike-line" style="width:{{ item.width_dislike_line }}%"></div></div>
+                <div class="count-dislikes">{{ item.count_dislikes }}</div>
+            </div>
+        </div>
+        {% endfor %} -->
+
+
+    </div>
+</div>
+
+<div class="paginator box-shadow" id="paginator">
+
+</div>
+
+
+<script type = "text/babel" id="myScript">
+    catalog_state = false;
+    if(typeof react_catalog !== undefined){
+        catalog_state = react_catalog.state;
+        let right_menu_state = react_right_menu.state.data;
+        for(let i in right_menu_state){
+            console.log(right_menu_state[i].name)
+            if(right_menu_state[i].name === 'catalog'){
+                right_menu_state[i].all_active = false;
+                break;
+            }
+        }
+
+        react_right_menu.setState({data: right_menu_state})
+    }
+    ReactDOM.render(React.createElement(React_catalog, null), document.getElementById('catalog_react'));
+    ReactDOM.render(React.createElement(React_paginator, {lastPage:{{lastPage}}, type: 'catalog' }), document.getElementById('paginator'));
+</script>

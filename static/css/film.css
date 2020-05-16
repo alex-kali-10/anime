@@ -1,0 +1,148 @@
+.film-area {
+  width: 100%;
+  height: auto;
+  padding-bottom: 10px;
+  text-align: left; }
+  .film-area .left-block {
+    width: calc(100% - 279px);
+    height: 500px;
+    float: left; }
+    .film-area .left-block .block-name, .film-area .left-block .block-state, .film-area .left-block .block-views, .film-area .left-block .block-year, .film-area .left-block .block-season, .film-area .left-block .block-age_rating, .film-area .left-block .block-source, .film-area .left-block .block-studio, .film-area .left-block .block-producer, .film-area .left-block .block-genre {
+      display: block;
+      padding: 3px;
+      width: calc(100% - 30px);
+      min-height: 20px;
+      padding-top: 5px;
+      padding-left: 10px;
+      margin-left: 10px;
+      margin-top: 4px; }
+    .film-area .left-block .block-name {
+      margin-top: 15px;
+      font-size: 21px; }
+    .film-area .left-block .block-genre {
+      min-height: 20px;
+      height: auto;
+      line-height: 25px;
+      padding-top: 0; }
+    .film-area .left-block .br {
+      margin-top: 10px;
+      display: block;
+      margin-left: 20px;
+      width: calc(100% - 30px);
+      height: 1px;
+      background: rgba(30, 30, 30, 0.4); }
+  .film-area .right-block {
+    width: 269px;
+    height: 500px;
+    float: left;
+    padding-right: 10px; }
+    .film-area .right-block .block-avatar {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      height: 380px;
+      background: #323232;
+      margin-top: 20px;
+      background-size: cover; }
+    .film-area .right-block .my-otziv {
+      width: 100%;
+      height: 70px; }
+      .film-area .right-block .my-otziv .block-feedback {
+        width: 100%;
+        height: 30px;
+        display: block;
+        background: white;
+        position: relative; }
+        .film-area .right-block .my-otziv .block-feedback .reiting-line-area {
+          bottom: 0; }
+        .film-area .right-block .my-otziv .block-feedback .my-list-area {
+          position: absolute;
+          bottom: -40px;
+          left: 0;
+          width: 100%;
+          height: 40px; }
+        .film-area .right-block .my-otziv .block-feedback .my-list {
+          border: 1px solid black;
+          width: calc(50% - 12px);
+          height: 23px;
+          margin-top: 7px;
+          line-height: 23px;
+          float: left;
+          cursor: pointer;
+          font-size: 15px;
+          padding-left: 4px;
+          position: relative; }
+        .film-area .right-block .my-otziv .block-feedback .most-watch {
+          border: 1px solid black;
+          margin-left: 6px;
+          width: calc(50% - 7px);
+          height: 23px;
+          margin-top: 7px;
+          line-height: 23px;
+          float: left;
+          cursor: pointer;
+          font-size: 15px;
+          padding-left: 4px;
+          position: relative; }
+        .film-area .right-block .my-otziv .block-feedback .my-list:after, .film-area .right-block .my-otziv .block-feedback .most-watch:after {
+          content: "";
+          right: 3px;
+          top: 3px;
+          width: 15px;
+          height: 15px;
+          position: absolute;
+          background-image: url(../image/star.svg);
+          background-size: cover;
+          background-position: center; }
+  .film-area .bottom-block {
+    width: calc(100% - 40px);
+    height: auto;
+    float: left;
+    padding: 10px; }
+  .film-area .bottom-block2 {
+    float: left;
+    width: calc(100% - 20px);
+    margin-left: 10px; }
+    .film-area .bottom-block2 .inf-block-video {
+      width: calc(100% - 30px);
+      height: 40px;
+      padding-left: 15px;
+      padding-right: 15px;
+      line-height: 40px;
+      background: #969696;
+      cursor: pointer; }
+    .film-area .bottom-block2 .block-video {
+      width: 100%;
+      height: auto;
+      margin-top: 10px; }
+      .film-area .bottom-block2 .block-video .list-video {
+        width: 100%;
+        min-height: 50px;
+        margin-bottom: 10px; }
+        .film-area .bottom-block2 .block-video .list-video .href-video {
+          display: inline-block;
+          width: 38px;
+          min-height: 38px;
+          background: #323232;
+          margin-left: 4px;
+          margin-top: 6px;
+          text-align: center;
+          cursor: pointer;
+          color: white;
+          line-height: 38px; }
+        .film-area .bottom-block2 .block-video .list-video .area-for-player {
+          display: block;
+          margin-top: 10px;
+          margin-bottom: 5px; }
+    .film-area .bottom-block2 .not-active ~ .list-video {
+      display: none; }
+
+.green-href {
+  color: darkgreen;
+  cursor: pointer; }
+
+.my_list_best .my-list-area .my-list:after {
+  background-image: url(../image/star-active.svg) !important; }
+
+.my_list_most_watch .my-list-area .most-watch:after {
+  background-image: url(../image/star-active.svg) !important; }

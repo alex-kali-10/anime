@@ -1,0 +1,35 @@
+<div class="box-shadow" style="display: inline-block">
+    <div class="name-block">
+        {{name_cat}}{{name}}
+        <div class="left1" onclick="react_router.toPage('{{name_catalog}}/{{ name }}/popular')">По просмотрам</div>
+        <div class="left2" onclick="react_router.toPage('{{name_catalog}}/{{ name }}/new')">По дате</div>
+    </div>
+
+    <div class="list-film">
+        {% for item in films %}
+        <div class="block-film" onclick="react_router.toPage('film/'+{{ item.id }})">
+            <div class="block-avatar" style="background-image: url({{ item.avatar.url }})"></div>
+            <div class="block-name">{{ item.name }}</div>
+            <div class="views-block">{{ item.goodViews }}</div>
+            <div class="best-block">{{ item.count_best }}</div>
+            <div class="most-watch-block">{{ item.count_watch }}</div>
+            <div class="reiting-line-area">
+                <div class="count-likes">{{ item.count_likes }}</div>
+                <div class="line"><div class="dislike-line" style="width:{{ item.width_dislike_line }}%"></div></div>
+                <div class="count-dislikes">{{ item.count_dislikes }}</div>
+            </div>
+        </div>
+        {% endfor %}
+
+
+    </div>
+</div>
+
+<div class="paginator box-shadow" id="paginator">
+
+</div>
+
+
+<script type = "text/babel" id="myScript">
+    ReactDOM.render(React.createElement(React_paginator, {lastPage:{{lastPage}}, type: 'lite', name: '{{ name }}', order: '{{ order }}',name_catalog:'{{name_catalog}}' }), document.getElementById('paginator'));
+</script>

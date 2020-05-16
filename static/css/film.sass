@@ -1,0 +1,161 @@
+
+
+
+.film-area
+  width: 100%
+  height: auto
+  padding-bottom: 10px
+  text-align: left
+  .left-block
+    width: calc(100% - 279px)
+    height: 500px
+    float: left
+    .block-name , .block-state, .block-views, .block-year, .block-season, .block-age_rating, .block-source, .block-studio, .block-producer, .block-genre
+      display: block
+      padding: 3px
+      width: calc(100% - 30px)
+      min-height: 20px
+      padding-top: 5px
+      padding-left: 10px
+      margin-left: 10px
+      margin-top: 4px
+    .block-name
+      margin-top: 15px
+      font-size: 21px
+    .block-genre
+      min-height: 20px
+      height: auto
+      line-height: 25px
+      padding-top: 0
+    .br
+      margin-top: 10px
+      display: block
+      margin-left: 20px
+      width: calc(100% - 30px)
+      height: 1px
+      background: rgba(30,30,30,0.4)
+
+  .right-block
+    width: 269px
+    height: 500px
+    float: left
+    padding-right: 10px
+    .block-avatar
+      margin-left: auto
+      margin-right: auto
+      width: 100%
+      height: 380px
+      background: #323232
+      margin-top: 20px
+      background-size: cover
+    .my-otziv
+      width: 100%
+      height: 70px
+      .block-feedback
+        width: 100%
+        height: 30px
+        display: block
+        background: white
+        position: relative
+        .reiting-line-area
+          bottom: 0
+        .my-list-area
+          position: absolute
+          bottom: -40px
+          left: 0
+          width: 100%
+          height: 40px
+        .my-list
+          border: 1px solid black
+          width: calc(50% - 12px)
+          height: 23px
+          margin-top: 7px
+          line-height: 23px
+          float: left
+          cursor: pointer
+          font-size: 15px
+          padding-left: 4px
+          position: relative
+        .most-watch
+          border: 1px solid black
+          margin-left: 6px
+          width: calc(50% - 7px)
+          height: 23px
+          margin-top: 7px
+          line-height: 23px
+          float: left
+          cursor: pointer
+          font-size: 15px
+          padding-left: 4px
+          position: relative
+        .my-list , .most-watch
+          &:after
+            content: ''
+            right: 3px
+            top: 3px
+            width: 15px
+            height: 15px
+            position: absolute
+            background-image: url(../image/star.svg)
+            background-size: cover
+            background-position: center
+
+  .bottom-block
+    width: calc(100% - 40px)
+    height: auto
+    float: left
+    padding: 10px
+
+  .bottom-block2
+    float: left
+    width: calc(100% - 20px)
+    margin-left: 10px
+    .inf-block-video
+      width: calc(100% - 30px)
+      height: 40px
+      padding-left: 15px
+      padding-right: 15px
+      line-height: 40px
+      background: rgb(150,150,150)
+      cursor: pointer
+    .block-video
+      width: 100%
+      height: auto
+      margin-top: 10px
+      .list-video
+        width: 100%
+        min-height: 50px
+        margin-bottom: 10px
+        .href-video
+          display: inline-block
+          width: 38px
+          min-height: 38px
+          background: rgb(50,50,50)
+          margin-left: 4px
+          margin-top: 6px
+          text-align: center
+          cursor: pointer
+          color: white
+          line-height: 38px
+        .area-for-player
+          display: block
+          margin-top: 10px
+          margin-bottom: 5px
+    .not-active ~ .list-video
+      display: none
+.green-href
+  color: darkgreen
+  cursor: pointer
+
+
+.my_list_best
+  .my-list-area
+    .my-list
+      &:after
+        background-image: url(../image/star-active.svg) !important
+
+.my_list_most_watch
+  .my-list-area
+    .most-watch
+      &:after
+        background-image: url(../image/star-active.svg) !important

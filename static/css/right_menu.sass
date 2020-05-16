@@ -1,0 +1,124 @@
+.options
+  width: 100%
+  height: 45px
+  position: relative
+  float: right
+  transition: width 0.4s ease-in-out
+  transition-delay: 0.4s
+  .name-block
+    width: calc(100% - 45px)
+    position: absolute
+    right: 45px
+    top: 0
+  .icon-options
+    width: 45px
+    height: 45px
+    float: left
+    cursor: pointer
+    position: absolute
+    right: 0
+    top: 0
+    &:after
+      content: ''
+      position: absolute
+      left: 10%
+      top: 10%
+      width: 80%
+      height: 80%
+      background-image: url(../image/options.svg)
+      background-size: cover
+      transition-duration: 0.4s
+      transition-timing-function: ease-in-out
+      transition-delay: 0.4s
+
+
+.right-menu
+  position: absolute
+  width: 100%
+  left: 0
+  top: 45px
+
+  .item_right_menu
+    display: block
+    width: 100%
+    height: 50px
+    text-align: center
+    line-height: 50px
+    margin-top: 9px
+    position: relative
+    input
+      position: absolute
+      left: 10px
+      width: 16px
+      height: 16px
+      top: calc(50% - 11px)
+    label
+      display: block
+      width: 100%
+      height: 100%
+      background: rgb(230,250,230)
+      cursor: pointer
+      border-top: 2px black solid
+      border-bottom: 2px black solid
+      transition-duration: 1s
+      &:hover
+        background: rgb(100,170,100)
+  .right_menu_false
+    label
+      background: rgb(250,230,230)
+      &:hover
+        background: rgb(170,100,100)
+  .to-top
+    position: absolute
+    right: 0
+    top: 0px
+    width: 45px
+    height: calc(50% + 2px)
+    background-color: grey
+    cursor: pointer
+    border-left: 2px black solid
+    transition-duration: 1s
+    background-image: url(../image/to_top.svg)
+    background-size: cover
+    background-repeat: no-repeat
+    background-size: 30px
+    background-position: center
+    &:hover
+      background-color: darkgreen
+  .to-bot
+    position: absolute
+    right: 0
+    bottom: -4px
+    width: 45px
+    height: calc(50% + 2px)
+    background-color: grey
+    cursor: pointer
+    border-left: 2px black solid
+    transition-duration: 1s
+    background-image: url(../image/to_bot.svg)
+    background-size: cover
+    background-repeat: no-repeat
+    background-size: 30px
+    background-position: center
+    &:hover
+      background-color: darkred
+
+.area-options
+  overflow: hidden
+  width: 100%
+  height: 45px
+  transition: height 0.4s
+  .options
+    width: 45px
+
+.options_active
+  height: 300px
+  transition: height 0.4s
+  transition-delay: 0.4s
+  .options
+    width: 100%
+    transition-delay: 0s
+    .icon-options
+      &:after
+        transform: rotate(90deg)
+        transition-delay: 0s

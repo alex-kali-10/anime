@@ -1,0 +1,146 @@
+.name-block {
+  width: 100%;
+  height: 42px;
+  background: #363232;
+  text-align: center;
+  color: #e6e6e6;
+  font-size: 18px;
+  line-height: 45px;
+  position: relative;
+  border-bottom: 3px darkred solid; }
+  .name-block .left1 {
+    position: absolute;
+    left: 10px;
+    bottom: 0px;
+    color: white;
+    width: 110px;
+    height: 30px;
+    line-height: 30px;
+    border: 3px solid darkgreen;
+    border-bottom: none;
+    font-size: 15px;
+    cursor: pointer; }
+  .name-block .left2 {
+    position: absolute;
+    left: 130px;
+    bottom: 0px;
+    color: white;
+    width: 110px;
+    height: 30px;
+    line-height: 30px;
+    border: 3px solid darkgreen;
+    border-bottom: none;
+    font-size: 15px;
+    cursor: pointer; }
+
+.top-slider, .bottom-block-slider {
+  width: 100%;
+  height: 300px;
+  background: lightgrey;
+  float: left; }
+  .top-slider .owl-prev, .bottom-block-slider .owl-prev {
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(230, 230, 230, 0.5) !important;
+    font-size: 60px !important; }
+    .top-slider .owl-prev:hover, .bottom-block-slider .owl-prev:hover {
+      background: rgba(230, 230, 230, 0.8) !important; }
+  .top-slider .owl-next, .bottom-block-slider .owl-next {
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: rgba(230, 230, 230, 0.5) !important;
+    font-size: 60px !important; }
+    .top-slider .owl-next:hover, .bottom-block-slider .owl-next:hover {
+      background: rgba(230, 230, 230, 0.8) !important; }
+  .top-slider .owl-theme1, .bottom-block-slider .owl-theme1 {
+    width: 100%;
+    height: calc(100% - 45px);
+    background: darkblue; }
+    .top-slider .owl-theme1 .slide, .bottom-block-slider .owl-theme1 .slide {
+      height: 255px;
+      width: 190px;
+      background: darkgreen;
+      background-size: cover;
+      cursor: pointer; }
+  .top-slider .owl-theme2, .bottom-block-slider .owl-theme2 {
+    width: 100%;
+    height: calc(100% - 45px);
+    background: darkblue; }
+    .top-slider .owl-theme2 .slide, .bottom-block-slider .owl-theme2 .slide {
+      height: 255px;
+      width: 300px;
+      background: darkgreen;
+      background-size: cover;
+      background-position-x: -40px;
+      cursor: pointer;
+      background-repeat: no-repeat; }
+
+.left-block-inf, .right-block-inf {
+  width: calc(50% - 5px);
+  height: 630px;
+  float: left;
+  margin-top: 10px; }
+  .left-block-inf .item-list, .right-block-inf .item-list {
+    text-align: left;
+    width: calc(100% - 4px);
+    height: 43px;
+    margin-top: 2px;
+    cursor: pointer;
+    border-left: 4px solid black; }
+    .left-block-inf .item-list:nth-child(2n) .block-name, .right-block-inf .item-list:nth-child(2n) .block-name {
+      background: #c8c8c8 !important; }
+    .left-block-inf .item-list:nth-child(2n) .block-name-long, .right-block-inf .item-list:nth-child(2n) .block-name-long {
+      background: #c8c8c8 !important; }
+    .left-block-inf .item-list:hover, .right-block-inf .item-list:hover {
+      border-left: 4px solid green; }
+    .left-block-inf .item-list .block-data, .right-block-inf .item-list .block-data {
+      width: 70px;
+      height: 100%;
+      float: left;
+      background: #3c3c3c;
+      line-height: 45px; }
+    .left-block-inf .item-list .block-avatar, .right-block-inf .item-list .block-avatar {
+      width: 30px;
+      height: 100%;
+      float: left;
+      background: #505050;
+      background-size: cover; }
+    .left-block-inf .item-list .block-name, .right-block-inf .item-list .block-name {
+      width: calc(100% - 100px);
+      height: 100%;
+      float: left;
+      background: #b4b4b4;
+      line-height: 45px; }
+    .left-block-inf .item-list .block-name-long, .right-block-inf .item-list .block-name-long {
+      width: calc(100% - 70px);
+      height: 100%;
+      float: left;
+      background: #b4b4b4;
+      line-height: 45px;
+      font-size: 14px; }
+
+.right-block-inf {
+  width: calc(50% - 5px);
+  height: 630px;
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px; }
+
+.bottom-block-slider {
+  width: 100%;
+  height: 300px;
+  background: lightgrey;
+  float: left;
+  margin-top: 10px; }
+
+.bottom-list {
+  width: 100%;
+  float: left;
+  margin-top: 10px;
+  text-align: center; }

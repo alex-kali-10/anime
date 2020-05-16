@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <link href="{% static 'css/reset.css' %}" rel="stylesheet">
+    <link href="{% static 'css/like.css' %}" rel="stylesheet">
+    <link href="{% static 'css/top_menu.css' %}" rel="stylesheet">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+    <link href="{% static 'css/film.css' %}" rel="stylesheet">
+    <link href="{% static 'css/catalog.css' %}" rel="stylesheet">
+    <link href="{% static 'css/first_page.css' %}" rel="stylesheet">
+    <link href="{% static 'css/comments.css' %}" rel="stylesheet">
+    <link href="{% static 'css/survey.css' %}" rel="stylesheet">
+    <link href="{% static 'css/right_menu.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/adaptiv.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+
+    <script>
+        let csrf = '{{ csrf_token }}';
+        let user = '{{ user }}';
+        let avatar_url = '{{ avatar }}';
+        let korz = {};
+        let value_click;
+        let catalog_state = false;
+        //let form_avatar_html = `{{form_avatar}}`;
+        let catalog_active = 'false';
+        let page_router = `{{ page_router }}`;
+    </script>
+</head>
+<body>
+<div class="top-menu">
+    <div class="top-menu2">
+        <div class="top-menu-inner">
+            <div class="left-block" onclick="menu_active()">
+
+            </div>
+            <div class="right-block">
+                <div class="item" onclick="react_router.toPage('first_page')"><div class="big-word">Главная</div></div>
+                <div class="item" onclick="react_router.toPage('catalog')"><div class="big-word">Каталог</div><div class="little-word">аниме</div></div>
+                <div class="item" onclick="react_router.toPage('top-100')"><div class="big-word">Топ-100</div><div class="little-word">аниме</div></div>
+                <div class="item"><div class="big-word">Сообщество</div></div>
+                <div class="item"><div class="big-word">Видео</div><div class="little-word">блогеров</div></div>
+                <div class="item"><div class="big-word">Помощь</div></div>
+                <div class="area-item area-item-hidden" id="auth"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="conteiner-body">
+
+    <div class="area-content">
+        <div id="search">
+
+        </div>
+
+        <div class="content" id="content">
+
+        </div>
+    </div>
+    <div class="pereferia-block" id="right-menu">
+
+    </div>
+
+    <div class="footer">
+        lexa29.03.1999@gmail.com
+    </div>
+</div>
+
+
+
+
+<div class="menu-button">
+    <span class="bar"></span>
+    <span class="bar"></span>
+</div>
+
+
+<div class="menu-icon">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+</div>
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+
+
+
+
+<script type = "text/babel" src="{% static 'js/react_search.js' %}"></script>
+<script type = "text/babel" src="{% static 'js/react_router.js' %}"></script>
+<script type = "text/babel" src="{% static 'js/react_film.js' %}"></script>
+<script type = "text/babel" src="{% static 'js/react_catalog.js' %}"></script>
+<script type = "text/babel" src="{% static 'js/react_paginator.js' %}"></script>
+<script type = "text/babel" src="{% static 'js/react_auth.js' %}"></script>
+<script type = "text/babel" src="{% static 'js/react_comments.js' %}"></script>
+<script type = "text/babel" src="{% static 'js/react_survey.js' %}"></script>
+<script type = "text/babel" src="{% static 'js/react_feedback_film.js' %}"></script>
+
+
+
+
+<script type = "text/babel" src="{% static 'js/react_right_menu.js' %}"></script>
+
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?116"></script>
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?116"></script>
+
+
+
+</body>
+</html>
